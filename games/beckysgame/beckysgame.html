@@ -1,0 +1,687 @@
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />	
+<style>
+img { 
+display: block;
+width:300px;
+height:;
+
+
+}
+     
+    
+    
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: lightblue;
+    background-image:url(b8.jpg);
+    background-position: center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #777;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-100px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-100px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: transparent;
+    color: royalblue;
+}
+
+.modal-body {padding: 2px 16px;
+    color: royalblue;
+    }
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: transparent;
+    color: royalblue;
+}
+
+ body{
+ background-image: url('imgs/back.jpg');
+background-size: cover;
+background-attachment: fixed;
+
+
+}
+.button {
+  display: inline-block;
+  padding: 3px 7px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: lightblue; /*~#4caf50*/
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+</style>
+</head>
+<body onload="load();">
+
+   <audio autoplay loop>
+  <source src="row.ogg" type="audio/ogg">
+  
+Your browser does not support the audio element.
+</audio> 
+    <button style="background-color:lightblue;"><a href="http://xama.online"><p style="color:black;text-shadow: 3px 5px 5px grey;border: 5px 4px 7px solid;">Back to menu</p></a></button>
+<!-- Trigger/Open The Modal -->
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content" style="text-align:center;">
+    <div class="modal-header">
+      <span class="close">X</span>
+      <h2>Hi everybody welcome to beckys game enjoy the game</h2>
+    </div>
+    <div class="modal-body">
+      <p>Only works with chrome in Linux, windows desktop<br>
+Hi works in chrome at the moment, to use click in the images.  Soon version in portuguese from brazil. Thank you. Made by R. Edward Gouveia </p>
+        click in X to close <br>
+        
+    </div>
+    <div class="modal-footer">
+      <h3>Made by R. Edward Gouveia</h3>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+function load() {
+    modal.style.display = "block";
+ var msg = new SpeechSynthesisUtterance('Hi everybody welcome to beckys game enjoy the game. Works in chrome at the moment, to use click in the images.   Soon version in portuguese from brazil. Thank you. Made by R. Edward Gouveia. Click X to close .');
+ //var msg = new SpeechSynthesisUtterance('Ola este jogo e feito para Rebecca Gouveia e Lourenso. para jogar clique nas imagens. feito por R. Edward Gouveia');
+msg.lang = 'en-US';
+window.speechSynthesis.speak(msg);
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<div  style="text-align:center;">
+
+<!--
+<img id="antilopef" src="imgs/antilopef.png" alt="Female Antilope"/>
+<img id="baboon" src="imgs/baboon.png" alt="Baboon"/>
+<img id="cat" src="imgs/nano.png" alt="cat"/>
+<img id="dolphin" src="imgs/dolphin.png" alt="Dolphin"/>
+<img id="eagle" src="imgs/eagle.png" alt="eagle"/>
+<img id="fox" src="imgs/fox.png" alt="Fox"/>
+<img id="gorilla" src="imgs/gorilla.png" alt="Gorilla"/>
+<img id="human" src="imgs/woman.png" alt="Woman"/>
+<img id="iguana" src="imgs/iguana.png" alt="Iguana"/>
+<img id="jaguar" src="imgs/jaguar.png" alt="Jaguar"/>
+<img id="kangoro" src="imgs/kangoro.png" alt="Kangoro"/>
+<img id="leopard" src="imgs/leopard.png" alt="Leopard"/>
+<img id="mlion" src="imgs/mountainlion.png" alt="Mountain Lion"/>
+<img id="nterrier" src="imgs/nterrier.png" alt="Norfolk Terrier"/>
+<img id="ocelot" src="imgs/ocelot.png" alt="Ocelot"/>
+<img id="panther" src="imgs/panther.png" alt="Panther"/>
+<img id="quail" src="imgs/quail.png" alt="Quail"/>
+<img id="rhinoceros" src="imgs/rhinoceros.png" alt="Rhinoceros"/>
+<img id="sumatrat" src="imgs/sumatrat.png" alt="Sumatra Tiger"/>
+<img id="thornydevil" src="imgs/thornydevil.png" alt="Thorny Devil"/>
+<img id="uakari" src="imgs/uakari.png" alt="uakari"/>
+
+<img id="yorkshireterrier" src="imgs/yorkshireterrier.png" alt="Yorkshire Terrier"/>
+<img id="vervetm" src="imgs/vervetm.png" alt="Vervet Monkey"/>
+<img id="warthog" src="imgs/warthog.png" alt="warthog"/>
+<img id="xraytetra" src="imgs/xraytetra.png" alt="x-ray tetra"/>
+<img id="zebra" src="imgs/zebra.png" alt="Zebra"/>
+
+
+
+
+<canvas id="myCanvas" width="600" height="480"
+style="border:1px solid blue;background-color:cyan;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+-->
+
+<p><button class="button" onclick="playAudioa();">A<img id="antilopef" src="imgs/antilopef.png" alt="Female Antilope"/></button>
+<button class="button" onclick="playAudiob();">B<img id="baboon" src="imgs/baboon.png" alt="Baboon"/></button>
+<button class="button" onclick="playAudioc();">C<img id="cat" src="imgs/nano.png" alt="cat"/></button>
+<button class="button" onclick="playAudiod();">D<img id="dolphin" src="imgs/dolphin.png" alt="Dolphin"/></button>
+<button class="button" onclick="playAudioe();">E<img id="eagle" src="imgs/eagle.png" alt="eagle"/></button>
+<button class="button" onclick="playAudiof();">F<img id="fox" src="imgs/fox.png" alt="Fox"/></button>
+<button class="button" onclick="playAudiog();">G<img id="gorilla" src="imgs/gorilla.png" alt="Gorilla"/></button><br>
+<button class="button" onclick="playAudioh();">H<img id="human" src="imgs/woman.png" alt="Woman"/></button>
+<button class="button" onclick="playAudioi();">I<img id="iguana" src="imgs/iguana.png" alt="Iguana"/></button>
+<button class="button" onclick="playAudioj();">J<img id="jaguar" src="imgs/jaguar.png" alt="Jaguar"/></button>
+<button class="button" onclick="playAudiok();">K<img id="kangoro" src="imgs/kangoro.png" alt="Kangoro"/></button>
+<button class="button" onclick="playAudiol();">L<img id="leopard" src="imgs/leopard.png" alt="Leopard"/></button>
+<button class="button" onclick="playAudiom();">M<img id="mlion" src="imgs/mountainlion.png" alt="Mountain Lion"/></button>
+<button class="button" onclick="playAudion();">N<img id="nterrier" src="imgs/nterrier.png" alt="Norfolk Terrier"/></button><br>
+<button class="button" onclick="playAudioo();">O<img id="ocelot" src="imgs/ocelot.png" alt="Ocelot"/></button>
+<button class="button" onclick="playAudiop();">P<img id="panther" src="imgs/panther.png" alt="Panther"/></button>
+<button class="button" onclick="playAudioq(); ">Q<img id="quail" src="imgs/quail.png" alt="Quail"/></button>
+<button class="button" onclick="playAudior(); ">R<img id="rhinoceros" src="imgs/rhinoceros.png" alt="Rhinoceros"/></button>
+<button class="button" onclick="playAudios();">S<img id="sumatrat" src="imgs/sumatrat.png" alt="Sumatra Tiger"/></button>
+<button class="button" onclick="playAudiot();">T<img id="thornydevil" src="imgs/thornydevil.png" alt="Thorny Devil"/></button>
+<button class="button" onclick="playAudiou(); ">U<img id="uakari" src="imgs/uakari.png" alt="uakari"/></button><br>
+<button class="button" onclick="playAudiov(); ">V<img id="vervetm" src="imgs/vervetm.png" alt="Vervet Monkey"/></button>
+<button class="button" onclick="playAudiow(); ">W<img id="warthog" src="imgs/warthog.png" alt="warthog"/></button>
+<button class="button" onclick="playAudiox(); ">X<img id="xraytetra" src="imgs/xraytetra.png" alt="x-ray tetra"/></button>
+<button class="button" onclick="playAudioy(); ">Y<img id="yorkshireterrier" src="imgs/yorkshireterrier.png" alt="Yorkshire Terrier"/></button>
+<button class="button" onclick="playAudioz(); ">Z<img id="zebra" src="imgs/zebra.png" alt="Zebra"/></button>
+
+
+
+
+
+
+</p>
+</div>
+<script>
+var a = new Audio('a.ogg'); 
+var b = new Audio('b.ogg'); 
+var c = new Audio('c.ogg'); 
+var d = new Audio('d.ogg'); 
+var e = new Audio('e.ogg'); 
+var f = new Audio('f.ogg'); 
+var g = new Audio('g.ogg'); 
+var h = new Audio('h.ogg'); 
+var i = new Audio('i.ogg'); 
+var j = new Audio('j.ogg'); 
+var k = new Audio('k.ogg'); 
+var l = new Audio('l.ogg'); 
+var m = new Audio('m.ogg'); 
+var n = new Audio('n.ogg'); 
+var o = new Audio('o.ogg'); 
+var p = new Audio('p.ogg'); 
+var q = new Audio('q.ogg'); 
+var r = new Audio('r.ogg'); 
+var s = new Audio('s.ogg'); 
+var t = new Audio('t.ogg'); 
+var u = new Audio('u.ogg'); 
+var v = new Audio('v.ogg'); 
+var w = new Audio('w.ogg'); 
+var x = new Audio('x.ogg'); 
+var y = new Audio('y.ogg'); 
+var z = new Audio('z.ogg');
+ 
+function playAudioa() { 
+  
+var msg = new SpeechSynthesisUtterance('Antilope');
+msg.lang = 'en-US';
+window.speechSynthesis.speak(msg);  
+ //a.play(); 
+} 
+
+function playAudiob() { 
+  
+ var msg = new SpeechSynthesisUtterance('baboon');
+msg.lang = 'en-US';
+window.speechSynthesis.speak(msg);
+ 
+   //b.play(); 
+} 
+function playAudioc() { 
+var msg = new SpeechSynthesisUtterance('cat');
+msg.lang = 'en-US';
+window.speechSynthesis.speak(msg);   
+ //c.play(); 
+} 
+function playAudiod() { 
+var msg = new SpeechSynthesisUtterance('dolphin');
+msg.lang = 'en-US';
+window.speechSynthesis.speak(msg);   
+ //d.play(); 
+} 
+function playAudioe() { 
+
+var msg = new SpeechSynthesisUtterance('eagle');
+msg.lang = 'en-US';
+window.speechSynthesis.speak(msg);    
+//e.play(); 
+} 
+function playAudiof() { 
+var msg = new SpeechSynthesisUtterance('fox');
+msg.lang = 'en-US';
+window.speechSynthesis.speak(msg);    
+//f.play(); 
+} 
+function playAudiog() { 
+var msg = new SpeechSynthesisUtterance('gorilla');
+msg.lang = 'en-US';
+window.speechSynthesis.speak(msg);  
+  //g.play(); 
+} 
+function playAudioh() { 
+var msg = new SpeechSynthesisUtterance('human');
+msg.lang = 'en-US';
+window.speechSynthesis.speak(msg);   
+// h.play(); 
+} 
+function playAudioi() { 
+var msg = new SpeechSynthesisUtterance('iguana');
+msg.lang = 'en-US';
+window.speechSynthesis.speak(msg);    
+//i.play(); 
+} 
+function playAudioj() { 
+
+var msg = new SpeechSynthesisUtterance('jaguar');
+msg.lang = 'en-US';
+window.speechSynthesis.speak(msg);    
+//j.play(); 
+} 
+function playAudiok() { 
+var msg = new SpeechSynthesisUtterance('kangoro');
+msg.lang = 'en-US';
+window.speechSynthesis.speak(msg); 
+   // k.play(); 
+} 
+function playAudiol() { 
+var msg = new SpeechSynthesisUtterance('leopard');
+msg.lang = 'en-US';
+window.speechSynthesis.speak(msg);     
+//l.play(); 
+} 
+function playAudiom() { 
+var msg = new SpeechSynthesisUtterance('Mountain Lion');
+msg.lang = 'en-US';
+window.speechSynthesis.speak(msg);     
+//m.play(); 
+} 
+function playAudion() { 
+var msg = new SpeechSynthesisUtterance('norfolk terrier');
+msg.lang = 'en-US';
+window.speechSynthesis.speak(msg);    
+ //n.play(); 
+} 
+function playAudioo() { 
+var msg = new SpeechSynthesisUtterance('ocelote');
+msg.lang = 'en-US';
+window.speechSynthesis.speak(msg);     
+//o.play(); 
+} 
+function playAudiop() { 
+var msg = new SpeechSynthesisUtterance('panther');
+msg.lang = 'en-US';
+window.speechSynthesis.speak(msg);     
+//p.play(); 
+} 
+function playAudioq() { 
+var msg = new SpeechSynthesisUtterance('quail');
+msg.lang = 'en-US';
+window.speechSynthesis.speak(msg);     
+//q.play(); 
+} 
+function playAudior() { 
+var msg = new SpeechSynthesisUtterance('rhinoceros');
+msg.lang = 'en-US';
+window.speechSynthesis.speak(msg);     
+//r.play(); 
+} 
+function playAudios() { 
+ var msg = new SpeechSynthesisUtterance('sumatra tiger');
+msg.lang = 'en-US';
+window.speechSynthesis.speak(msg);    
+//s.play(); 
+} 
+function playAudiot() { 
+var msg = new SpeechSynthesisUtterance('thorny devil');
+msg.lang = 'en-US';
+window.speechSynthesis.speak(msg);     
+//t.play(); 
+} 
+function playAudiou() { 
+var msg = new SpeechSynthesisUtterance('uakari');
+msg.lang = 'en-US';
+window.speechSynthesis.speak(msg);     
+//u.play();
+
+} 
+function playAudiov() { 
+var msg = new SpeechSynthesisUtterance('vervet monkey');
+msg.lang = 'en-US';
+window.speechSynthesis.speak(msg);     
+//v.play(); 
+} 
+function playAudiow() { 
+var msg = new SpeechSynthesisUtterance('warthog');
+msg.lang = 'en-US';
+window.speechSynthesis.speak(msg);     
+//w.play(); 
+} 
+function playAudiox() { 
+var msg = new SpeechSynthesisUtterance('x-ray tetra');
+msg.lang = 'en-US';
+window.speechSynthesis.speak(msg);     
+//x.play(); 
+} 
+function playAudioy() { 
+var msg = new SpeechSynthesisUtterance('yorkshire terrier');
+msg.lang = 'en-US';
+window.speechSynthesis.speak(msg);     
+//y.play(); 
+} 
+function playAudioz() { 
+var msg = new SpeechSynthesisUtterance('zebra');
+msg.lang = 'en-US';
+window.speechSynthesis.speak(msg);     
+//z.play(); 
+} 
+
+
+/*
+function myCanvas1() {
+   
+      var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var img = document.getElementById("antilopef");
+    
+ctx.drawImage(img,0,0)};
+ 
+   
+function myCanvas2() {
+    
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var img = document.getElementById("baboon");
+    ctx.drawImage(img,0,0);
+};
+function myCanvas3() {
+    
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var img = document.getElementById("cat");
+    ctx.drawImage(img,0,0);
+};
+
+function myCanvas4() {
+    
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var img = document.getElementById("dolphin");
+    ctx.drawImage(img,0,0);
+    
+};
+function myCanvas5() {
+    
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var img = document.getElementById("eagle");
+    ctx.drawImage(img,0,0);
+    
+};
+function myCanvas6() {
+    
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var img = document.getElementById("fox");
+    ctx.drawImage(img,0,0);
+    
+};
+function myCanvas7() {
+    
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var img = document.getElementById("gorilla");
+    ctx.drawImage(img,0,0);
+    
+};
+function myCanvas8() {
+    
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var img = document.getElementById("human");
+    ctx.drawImage(img,0,0);
+    
+};
+function myCanvas9() {
+    
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var img = document.getElementById("iguana");
+    ctx.drawImage(img,0,0);
+    
+};
+function myCanvas10() {
+    
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var img = document.getElementById("jaguar");
+    ctx.drawImage(img,0,0);
+    
+};
+function myCanvas11() {
+    
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var img = document.getElementById("kangoro");
+    ctx.drawImage(img,0,0);
+    
+};
+function myCanvas12() {
+    
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var img = document.getElementById("leopard");
+    ctx.drawImage(img,0,0);
+    
+};
+function myCanvas13() {
+    
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var img = document.getElementById("mlion");
+    ctx.drawImage(img,0,0);
+    
+};
+function myCanvas14() {
+    
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var img = document.getElementById("nterrier");
+    ctx.drawImage(img,0,0);
+    
+};
+function myCanvas15() {
+    
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var img = document.getElementById("ocelot");
+    ctx.drawImage(img,0,0);
+    
+};
+function myCanvas16() {
+    
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var img = document.getElementById("panther");
+    ctx.drawImage(img,0,0);
+    
+};
+function myCanvas17() {
+    
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var img = document.getElementById("quail");
+    ctx.drawImage(img,0,0);
+    
+};
+function myCanvas18() {
+    
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var img = document.getElementById("rhinoceros");
+    ctx.drawImage(img,0,0);
+    
+};
+function myCanvas19() {
+    
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var img = document.getElementById("sumatrat");
+    ctx.drawImage(img,0,0);
+    
+};
+function myCanvas20() {
+    
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var img = document.getElementById("thornydevil");
+    ctx.drawImage(img,0,0);
+    
+};
+function myCanvas21() {
+    
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var img = document.getElementById("dolphin");
+    ctx.drawImage(img,0,0);
+    
+};
+function myCanvas22() {
+    
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var img = document.getElementById("vervetm");
+    ctx.drawImage(img,0,0);
+    
+};
+function myCanvas23() {
+    
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var img = document.getElementById("warthog");
+    ctx.drawImage(img,0,0);
+    
+};
+function myCanvas24() {
+    
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var img = document.getElementById("xraytetra");
+    ctx.drawImage(img,0,0);
+    
+};
+function myCanvas25() {
+    
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var img = document.getElementById("yorkshireterrier");
+    ctx.drawImage(img,0,0);
+    
+};
+function myCanvas26() {
+    
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var img = document.getElementById("zebra");
+    ctx.drawImage(img,0,0);
+    
+};
+*/
+</script>
+ 
+
+</body>
+
+URL: http://freemusicarchive.org/music/Mister_Jan/Silly_Songs/14_-_mister_jan_-_row_row_row_your_boat_kzz01_vbr
+Comments: http://freemusicarchive.org/
+Curator: Oddio Overplay
+Copyright: Attribution-NonCommercial-ShareAlike 3.0 International: http://creativecommons.org/licenses/by-nc-sa/3.0/
+
+</html>
+

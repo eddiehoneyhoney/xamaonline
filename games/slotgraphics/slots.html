@@ -1,0 +1,407 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>slots by R. Edward Gouveia</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />	
+		 <link rel="icon" href="/games/slotgraphics/eddie7.png">
+<meta name="keywords" content="slots, slots mini game, game, slots game, puzzle, slot">		
+		
+
+<style type="text/css">
+body {
+ background-image: url('background.jpg');
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+ background-size: cover;
+color: white;
+    
+    
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.jSlots-wrapper {
+    overflow: hidden;
+    height: 30px;
+    display: inline-block; /* to size correctly, can use float too, or width*/
+    border: none;
+}
+
+.slot {
+    float: left;
+}
+
+.button {
+  display: inline-block;
+  padding: 1px 2px;
+  font-size: 1px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #a1dcf9;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 6px #999;
+}
+
+.button:hover {background-color: #a1dcf9}
+
+.button:active {
+  background-color: #a1dcf9;
+  box-shadow: 0 5px #666;
+  transform: translateY(8px);
+}
+   .container{ 
+       width:auto;
+       height:auto;
+       min-height: 10px;
+       min-width: 10px;
+       background-color:#ae3a0f;
+       opacity: 0.7;
+       border-radius: 25%;
+   }
+/* ---------------------------------------------------------------------
+   FANCY EXAMPLE
+--------------------------------------------------------------------- */
+.fancy .jSlots-wrapper {
+    overflow: hidden;
+    height: 70px;
+    display: inline-block; /* to size correctly, can use float too, or width*/
+    border: 1px;
+
+  
+}
+
+
+.fancy .slot li {
+    width: 70px;
+    line-height: 70px;
+    text-align: center;
+    font-size: 70px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.8);
+    font-family: 'Gravitas One', serif;
+    border-left: none;
+}
+
+.fancy .slot:first-child li {
+    border-left: none;
+}
+
+
+
+.fancy .slot li:nth-child(5) {
+    background-color: transparent;
+}
+.fancy .slot li:nth-child(4) {
+    background-color: transparent;
+}
+.fancy .slot li:nth-child(3) {
+    background-color: transparent;
+}
+.fancy .slot li:nth-child(2) {
+    background-color: transparent;
+}
+.fancy .slot li:nth-child(1),
+.fancy .slot li:nth-child(6) {
+    background-color: transparent;
+}
+
+.fancy .slot li span {
+    display: inline;
+}
+
+/* ---------------------------------------------------------------------
+   ANIMATIONS
+--------------------------------------------------------------------- */
+
+@-webkit-keyframes winner {
+        0%, 50%, 100% {
+            -webkit-transform: rotate(0deg);
+            font-size:80px;
+            color: #fff;
+        }
+        25% {
+            -webkit-transform: rotate(20deg);
+            font-size:90px;
+            color: #FF16D8;
+        }
+        75% {
+            -webkit-transform: rotate(-20deg);
+            font-size:100px;
+            color: #FF16D8;
+        }
+}
+@-moz-keyframes winner {
+        0%, 50%, 100% {
+            -moz-transform: rotate(0deg);
+            font-size: 80px;
+            color: #fff;
+        }
+        25% {
+            -moz-transform: rotate(20deg);
+            font-size:90px;
+            color: #FF16D8;
+        }
+        75% {
+            -moz-transform: rotate(-20deg);
+            font-size:100px;
+            color: #FF16D8;
+        }
+}
+@-ms-keyframes winner {
+        0%, 50%, 100% {
+            -ms-transform: rotate(0deg);
+            font-size:80px;
+            color: #fff;
+        }
+        25% {
+            -ms-transform: rotate(20deg);
+            font-size:90px;
+            color: #FF16D8;
+        }
+        75% {
+            -ms-transform: rotate(-20deg);
+            font-size:100px;
+            color: #FF16D8;
+        }
+}
+
+
+@-webkit-keyframes winnerBox {
+        0%, 50%, 100% {
+            box-shadow: inset 0 0  0px gold;
+            background-color: gold;
+        }
+        25%, 75% {
+            box-shadow: inset 0 0 30px gold;
+            background-color: gold;
+        }
+}
+@-moz-keyframes winnerBox {
+        0%, 50%, 100% {
+            box-shadow: inset 0 0  0px gold;
+            background-color: transparent;
+        }
+        25%, 75% {
+            box-shadow: inset 0 0 30px gold;
+            background-color: gold;
+        }
+}
+@-ms-keyframes winnerBox {
+        0%, 50%, 100% {
+            box-shadow: inset 0 0  0px gold;
+            background-color: transparent;
+        }
+        25%, 75% {
+            box-shadow: inset 0 0 30px gold;
+            background-color: gold;
+        }
+.logo { 
+    font-size: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: rgb(70,120,120);
+    text-shadow: 1px 1px 2px rgb(255,255,0),
+                 -1px -1px 2px rgb(255,255,0),
+                 5px 8px 8px rgb(0,0,0);
+}
+    
+
+
+
+.winner li {
+    -webkit-animation: winnerBox 2s infinite linear;
+       -moz-animation: winnerBox 2s infinite linear;
+        -ms-animation: winnerBox 2s infinite linear;
+}
+.winner li span {
+     -webkit-animation: winner 2s infinite linear;
+        -moz-animation: winner 2s infinite linear;
+         -ms-animation: winner 2s infinite linear;
+}
+
+</style>
+
+
+
+</head>
+<body>
+ <audio  autoplay loop>
+  <source id="sound1" src="back1.ogg" type="audio/ogg">
+  
+Your browser does not support the audio element.
+</audio>
+    
+      <div style="align-text:center;">
+      <div class="container" style="text-align: center;" >    
+    <div  class="fancy" style="text-align: center;">
+        <ul class="slot" style="text-align: center;">
+            <!-- In reverse order so the 7s show on load -->
+            <li><span><img style="max-width:100%;
+max-height:100%;"src="eddie7.png"/></span></li>
+            <li><span><img style="max-width:100%;
+max-height:100%;" src="eddie1.png"/></span></li>
+            <li><span><img style="max-width:100%;
+max-height:100%;"  src="eddie.png"/></span></li>
+            <li><span><img style="max-width:100%;
+max-height:100%;" src="eddie3.png"/></span></li>
+            <li><span><img style="max-width:100%;
+max-height:100%;" src="eddie4.png"/></span></li>
+           
+        </ul>
+<br>
+
+<!--
+               <ul class="slot">
+           
+            <li><span><img width="48" height="48" src="eddie7.png"</img></span></li>
+            <li><span><img width="48" height="48" src="eddie1.png"</img></span></li>
+            <li><span><img width="48" height="48" src="eddie2.png"</img></span></li>
+            <li><span><img width="48" height="48" src="eddie3.png"</img></span></li>
+            <li><span><img width="48" height="48" src="eddie4.png"</img></span></li>
+            <li><span><img width="48" height="48" src="eddie5.png"</img></span></li>
+            <li><span><img width="48" height="48" src="eddie6.png"</img></span></li>
+        </ul>
+<br>
+            <ul class="slot">
+            
+            <li><span><img width="48" height="48" src="eddie7.png"</img></span></li>
+            <li><span><img width="48" height="48" src="eddie1.png"</img></span></li>
+            <li><span><img width="48" height="48" src="eddie2.png"</img></span></li>
+            <li><span><img width="48" height="48" src="eddie3.png"</img></span></li>
+            <li><span><img width="48" height="48" src="eddie4.png"</img></span></li>
+            <li><span><img width="48" height="48" src="eddie5.png"</img></span></li>
+            <li><span><img width="48" height="48" src="eddie6.png"</img></span></li>
+        </ul>
+<br>
+          <ul class="slot"> 
+        
+            <li><span><img width="60" height="60" src="eddie7.png"</img></span></li>
+            <li><span><img width="60" height="60" src="eddie1.png"</img></span></li>
+            <li><span><img width="60" height="60" src="eddie2.png"</img></span></li>
+            <li><span><img width="60" height="60" src="eddie3.png"</img></span></li>
+            <li><span><img width="60" height="60" src="eddie4.png"</img></span></li>
+            <li><span><img width="60" height="60" src="eddie5.png"</img></span></li>
+            <li><span><img width="60" height="60" src="eddie6.png"</img></span></li>
+        </ul>
+<br>
+        <ul class="slot">
+            
+            <li><span><img width="60" height="60" src="eddie7.png"</img></span></li>
+            <li><span><img width="60" height="60" src="eddie1.png"</img></span></li>
+            <li><span><img width="60" height="60" src="eddie2.png"</img></span></li>
+            <li><span><img width="60" height="60" src="eddie3.png"</img></span></li>
+            <li><span><img width="60" height="60" src="eddie4.png"</img></span></li>
+            <li><span><img width="60" height="60" src="eddie5.png"</img></span></li>
+            <li><span><img width="60" height="60" src="eddie6.png"</img></span></li>
+        </ul>   
+<br>
+
+--><br><br>
+        
+     <button  class="button" id="playFancy"   value="Play">
+    <img  width="60" height="60" src="b7.png"/>
+       </button>
+   </div>
+</div>
+</div>      
+       
+      <div style="text-align: center"> 
+<h1 id="messages" style="color: yellow;"></h1>
+       </div>
+ 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script src="jquery.easing.1.3.js" type="text/javascript" charset="utf-8"></script>
+    <script src="jquery.jSlots.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+        
+      
+         <!--
+            function Redirect() {
+               window.location="http://xama.online/games/slotgraphics/jackpot.html";
+            }
+            
+         //-->
+              
+        
+        // fancy example
+        function write_message( $message ) {
+              document.getElementById('messages').innerHTML = $message;
+               
+
+        }
+        $('.fancy .slot').jSlots({
+            number : 5,
+            winnerNumber : 1,
+            
+            spinner : '#playFancy',
+            easing : 'easeOutSine',
+            time : 700,
+            loops : 3,
+
+            onStart : function() {
+                $('.slot').removeClass('winner');
+            
+            // write_message('                              ');
+            },
+            onWin : function(winCount, winners) {
+                // only fires if you win
+                
+                $.each(winners, function() {
+                    this.addClass('winner');
+                });
+                var audio = new Audio('yw.mp3');
+                // react to the # of winning slots                 
+                if ( winCount === 1 ) {
+                  
+                  
+                   write_message('<h1 style="font-size: 13px; line-height: 13px; color: rgb(56, 56, 54); text-shadow: 1px 1px 2px rgb(255,255,0); -1px -1px 2px rgb(255,255,0); 5px 8px 8px rgb(0,0,0);">You win</h1> ' + winCount + '<h1 style="font-size: 13px; line-height: 13px; text-shadow: 1px 1px 2px rgb(174, 66, 12); -1px -1px 2px rgb(31, 143, 181); 5px 8px 8px rgb(0,0,0);"> nano congratulations</h1>');
+                     audio.play();
+                      
+                } 
+                   else if ( winCount === 2 ) {
+                    write_message('<h1 style="font-size: 13px; line-height: 13px; color: rgb(50, 50, 48); text-shadow: 1px 1px 2px rgb(255,255,0); -1px -1px 2px rgb(255,255,0); 5px 8px 8px rgb(0,0,0);">Congratulations</h1> '  + winCount + '<h1 style="font-size: 13px; line-height: 13px; color: rgb(144, 37, 23); text-shadow: 1px 1px 2px rgb(255,255,0); -1px -1px 2px rgb(170, 28, 156); 5px 8px 8px rgb(0,0,0);"> nano !!!</h1>');
+                     audio.play();
+                      }
+                   else if ( winCount === 3 ) {
+                    write_message('<h1 style="font-size: 13px; line-height: 13px; color: rgb(54, 54, 53); text-shadow: 1px 1px 2px rgb(255,255,0); -1px -1px 2px rgb(255,255,0); 5px 8px 8px rgb(0,0,0);">Congratulations</h1> '  + winCount + '<h1 style="font-size: 13px; line-height: 13px; color: rgb(151, 40, 11); text-shadow: 1px 1px 2px rgb(255,255,0); -1px -1px 2px rgb(18, 16, 190); 5px 8px 8px rgb(0,0,0);"> nano !!!</h1>');
+                         audio.play(); 
+                       }
+                     else if ( winCount === 4 ) {
+                    write_message('<h1 style="font-size: 13px; line-height: 13px; color: rgb(46, 46, 44); text-shadow: 1px 1px 2px rgb(255,255,0); -1px -1px 2px rgb(255,255,0); 5px 8px 8px rgb(0,0,0);">Congratulations</h1>'  + winCount + '<h1 style="font-size: 13px; line-height: 13px; color: rgb(12, 91, 205); text-shadow: 1px 1px 2px rgb(255,255,0); -1px -1px 2px rgb(26, 101, 167); 5px 8px 8px rgb(0,0,0);"> nano !!!</h1>');
+                         audio.play();
+                       }
+                        else if ( winCount === 5 ) {
+                    write_message('<h1>Jackpot</h1><br>'  + winCount + ' nano !!!');
+                    setTimeout('Redirect()', 700);
+                       }
+                   else {
+                      
+                   }
+                
+            }
+        });
+        
+        
+    
+    </script>
+    <div style="text-align: center;">
+    <br><br><br><br><br>
+    <footer style="font-size: 11px; line-height: 11px; color: rgb(232, 232, 232); text-shadow: 1px 1px 2px rgb(96, 96, 89); -1px -1px 2px rgb(165, 165, 156); 5px 8px 8px rgb(0,0,0);">Made By R. Edward Gouveia<br>
+    
+    <script src="https://www.w3counter.com/tracker.js?id=104282"></script></footer>
+    </div>
+</body>
+</html>
